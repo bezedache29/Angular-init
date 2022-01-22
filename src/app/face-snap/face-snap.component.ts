@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaceSnapComponent implements OnInit {
 
+  title!: string;
+  description!: string;
+  createdDate!: Date;
+  snaps!: number;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.title = 'Ripley';
+    this.description = 'Mon pseudo depuis toujours';
+    this.createdDate = new Date();
+    this.snaps = 6;
   }
 
 }
