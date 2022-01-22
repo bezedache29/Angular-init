@@ -11,6 +11,7 @@ export class FaceSnapComponent implements OnInit {
   description!: string;
   createdDate!: Date;
   snaps!: number;
+  imgUrl!: string;
 
   constructor() { }
 
@@ -19,6 +20,7 @@ export class FaceSnapComponent implements OnInit {
     this.description = 'Mon pseudo depuis toujours';
     this.createdDate = new Date();
     this.snaps = 6;
+    this.imgUrl = 'https://figurinesalien.files.wordpress.com/2017/11/paul-jackson-alien-banana.jpg'
   }
 
 }
