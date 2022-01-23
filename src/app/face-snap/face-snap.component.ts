@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { FaceSnap } from '../models/face-snap.model';
 import { FaceSnapsService } from '../services/face-snaps.service';
 
@@ -17,7 +18,7 @@ export class FaceSnapComponent implements OnInit {
   // imgUrl!: string;
   isSnap!: boolean;
 
-  constructor(private faceSnapsService: FaceSnapsService) { }
+  constructor(private faceSnapsService: FaceSnapsService, private router: Router) { }
 
   ngOnInit(): void {
     // this.title = 'Ripley';
@@ -36,6 +37,10 @@ export class FaceSnapComponent implements OnInit {
       this.isSnap = true;
       this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'snap');
     }
+  }
+
+  onFaceSnap(id: number): void {
+    this.router.navigateByUrl('facesnaps/' + id);
   }
 
 }
