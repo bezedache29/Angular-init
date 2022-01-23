@@ -12,6 +12,7 @@ export class FaceSnapComponent implements OnInit {
   createdDate!: Date;
   snaps!: number;
   imgUrl!: string;
+  isSnap!: boolean;
 
   constructor() { }
 
@@ -20,7 +21,18 @@ export class FaceSnapComponent implements OnInit {
     this.description = 'Mon pseudo depuis toujours';
     this.createdDate = new Date();
     this.snaps = 6;
-    this.imgUrl = 'https://figurinesalien.files.wordpress.com/2017/11/paul-jackson-alien-banana.jpg'
+    this.imgUrl = 'https://figurinesalien.files.wordpress.com/2017/11/paul-jackson-alien-banana.jpg';
+    this.isSnap = false;
+  }
+
+  onToggleSnap() {
+    if (this.isSnap) {
+      this.isSnap = false;
+      this.snaps--;
+    } else {
+      this.isSnap = true;
+      this.snaps++;
+    }
   }
 
 }

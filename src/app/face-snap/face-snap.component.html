@@ -2,4 +2,9 @@
 <p>Mise en ligne le : {{ createdDate }}</p>
 <img [src]="imgUrl" [alt]="title">
 <p>{{ description }}</p>
-<p>Likes : {{ snaps }}</p>
+<p>
+    <button (click)="onToggleSnap()">
+        {{ isSnap ? 'Oops unSnap!' : 'Oh Snap!' }}
+    </button>
+    Likes : {{ snaps }}
+</p>
