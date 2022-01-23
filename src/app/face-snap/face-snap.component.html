@@ -2,6 +2,7 @@
 <p>Mise en ligne le : {{ faceSnap.createdDate }}</p>
 <img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
 <p>{{ faceSnap.description }}</p>
+<p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
 <p>
     <button (click)="onToggleSnap()">
         {{ isSnap ? 'Oops unSnap!' : 'Oh Snap!' }}
