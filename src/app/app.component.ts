@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
         'title': 'Ripley',
         'description': 'Mon pseudo depuis toujours',
         'createdDate': new Date(),
-        'snaps': 0,
+        'snaps': 20,
         'imgUrl': 'https://figurinesalien.files.wordpress.com/2017/11/paul-jackson-alien-banana.jpg',
         'location': 'Nantes'
       },
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
         'title': 'Bezedache',
         'description': 'Mon deuxième pseudo',
         'createdDate': new Date(),
-        'snaps': 2,
+        'snaps': 50,
         'imgUrl': 'https://logodix.com/logo/83317.png',
         'location': 'Kerlouan'
       },
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
         'title': 'Morz',
         'description': 'Mon premier pseudo',
         'createdDate': new Date(),
-        'snaps':0,
+        'snaps':35,
         'imgUrl': 'https://lemagdesanimaux.ouest-france.fr/images/dossiers/2020-06/mini/morse-095329-650-400.jpg'
       }
     ];
