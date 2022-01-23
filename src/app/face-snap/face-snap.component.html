@@ -1,10 +1,10 @@
-<h2>{{ title }}</h2>
-<p>Mise en ligne le : {{ createdDate }}</p>
-<img [src]="imgUrl" [alt]="title">
-<p>{{ description }}</p>
+<h2>{{ faceSnap.title }}</h2>
+<p>Mise en ligne le : {{ faceSnap.createdDate }}</p>
+<img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
+<p>{{ faceSnap.description }}</p>
 <p>
     <button (click)="onToggleSnap()">
         {{ isSnap ? 'Oops unSnap!' : 'Oh Snap!' }}
     </button>
-    Likes : {{ snaps }}
+    Likes : {{ faceSnap.snaps }}
 </p>
