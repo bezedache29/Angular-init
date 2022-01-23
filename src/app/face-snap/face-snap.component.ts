@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FaceSnap } from '../models/face-snap.model';
+import { FaceSnapsService } from '../services/face-snaps.service';
 
 @Component({
   selector: 'app-face-snap',
@@ -16,7 +17,7 @@ export class FaceSnapComponent implements OnInit {
   // imgUrl!: string;
   isSnap!: boolean;
 
-  constructor() { }
+  constructor(private faceSnapsService: FaceSnapsService) { }
 
   ngOnInit(): void {
     // this.title = 'Ripley';
@@ -30,10 +31,10 @@ export class FaceSnapComponent implements OnInit {
   onToggleSnap() {
     if (this.isSnap) {
       this.isSnap = false;
-      this.faceSnap.snaps--;
+      this.faceSnapsService.unSnapFaceSnapById(this.faceSnap.id);
     } else {
       this.isSnap = true;
-      this.faceSnap.snaps++;
+      this.faceSnapsService.snapFaceSnapById(this.faceSnap.id);
     }
   }
 
