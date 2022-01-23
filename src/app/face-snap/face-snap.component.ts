@@ -31,10 +31,10 @@ export class FaceSnapComponent implements OnInit {
   onToggleSnap() {
     if (this.isSnap) {
       this.isSnap = false;
-      this.faceSnapsService.unSnapFaceSnapById(this.faceSnap.id);
+      this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'unsnap');
     } else {
       this.isSnap = true;
-      this.faceSnapsService.snapFaceSnapById(this.faceSnap.id);
+      this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'snap');
     }
   }
 
